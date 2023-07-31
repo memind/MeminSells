@@ -1,8 +1,8 @@
 # MeminSells
 ASP.Net Microservices
 
-Containerization: Docker
-Container Management: Portainer
+- Containerization: Docker
+- Container Management: Portainer
 
 Catalog Service
 - ASP.Net Core Web API application
