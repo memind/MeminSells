@@ -17,3 +17,10 @@ Basket Service
 - Redis database connection and containerization
 - Repository Pattern implementation
 - Containerize Basket Microservices with Redis using Docker Compose
+
+Discount Service
+- ASP.Net Core Web API application
+- REST API principles, CRUD operations
+- PostgreSQL database connection and containerization
+- Repository Pattern implementation
+- Containerize Discount Microservices with PostgreSQL using Docker Compose
