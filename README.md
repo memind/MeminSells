@@ -24,3 +24,10 @@ Discount Service
 - PostgreSQL database connection and containerization
 - Repository Pattern implementation
 - Containerize Discount Microservices with PostgreSQL using Docker Compose
+
+Ordering Service
+- ASP.Net Core Web API application
+- REST API principles, CRUD operations
+- Implementing DDD, CQRS and Clean Architecture with applying SOLID Principles
+- Developing CQRS implementation on commands and queries with using MediatR, FluentValidation and AutoMapper packages
+- EFCore Code First Approach
