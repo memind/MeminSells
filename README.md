@@ -3,7 +3,7 @@ ASP.Net Microservices
 
 - Databases and Microservices Containerization: Docker
 - Container Management: Portainer
-- PostgreSQL UI: pgAdmin
+- PostgreSQL Management: pgAdmin
 
 Catalog Service
 - ASP.NET Core Web API application
@@ -46,7 +46,3 @@ API Gateway Ocelot Service
 - Sample microservices/containers to reroute through the API Gateways
 - Run multiple different API Gateway/BFF container types
 - The Gateway aggregation pattern in Shopping.Aggregator
-
-WebUI ShoppingApp Service
-- ASP.NET Core Web Application with Bootstrap 4 and Razor template
-- Call Ocelot APIs with HttpClientFactory
