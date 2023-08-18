@@ -65,9 +65,16 @@ services:
       context: .
       dockerfile: ApiGateways/Shopping.Aggregator/Dockerfile
 
+  meminsells:
+    image: ${DOCKER_REGISTRY-}meminsells
+    build:
+      context: .
+      dockerfile: WebApps/MeminSells/Dockerfile
+
 volumes:
   mongo_data:
   portainer_data:
   postgres_data:
   pgadmin_data:
+
 
