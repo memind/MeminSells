@@ -46,3 +46,8 @@ API Gateway Ocelot Service
 - Sample microservices/containers to reroute through the API Gateways
 - Run multiple different API Gateway/BFF container types
 - The Gateway aggregation pattern in Shopping.Aggregator
+
+Web Client
+- ASP.NET Core Web Application with Bootstrap 4 and Razor template
+- Call Ocelot APIs with HttpClientFactory
+- ASPNET Core Razor Tools — View Components, partial Views, Tag Helpers, Model Bindings and Validations, Razor Sections etc.
