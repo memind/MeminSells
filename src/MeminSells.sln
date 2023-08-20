@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.Aggregator", "ApiG
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{7C469643-363B-45F7-91F4-131CA5C00BEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeminSells", "WebApps\MeminSells\MeminSells.csproj", "{C9B2EB1F-0085-40FC-ACA9-2B73DD8B421A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeminSells", "WebApps\MeminSells\MeminSells.csproj", "{C9B2EB1F-0085-40FC-ACA9-2B73DD8B421A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging", "BuildingBlocks\Common.Logging\Common.Logging\Common.Logging.csproj", "{323D98C6-AFDE-403F-A826-1EEE96CF8E14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,10 @@ Global
 		{C9B2EB1F-0085-40FC-ACA9-2B73DD8B421A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B2EB1F-0085-40FC-ACA9-2B73DD8B421A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B2EB1F-0085-40FC-ACA9-2B73DD8B421A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323D98C6-AFDE-403F-A826-1EEE96CF8E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323D98C6-AFDE-403F-A826-1EEE96CF8E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323D98C6-AFDE-403F-A826-1EEE96CF8E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323D98C6-AFDE-403F-A826-1EEE96CF8E14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,6 +130,7 @@ Global
 		{46D15A7F-A25A-4632-9E27-6F6DDBA45345} = {76195ABE-F407-4C6E-AD93-E57BAE9E41D3}
 		{7616737B-EC9B-437B-AE7F-A5F6ECC1A1D8} = {76195ABE-F407-4C6E-AD93-E57BAE9E41D3}
 		{C9B2EB1F-0085-40FC-ACA9-2B73DD8B421A} = {7C469643-363B-45F7-91F4-131CA5C00BEE}
+		{323D98C6-AFDE-403F-A826-1EEE96CF8E14} = {182B40D7-EB48-498F-9BE0-12EBC841CEAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA6A6DBA-EC82-427E-B9A3-A95D4436B956}

@@ -1,3 +1,4 @@
+using Common.Logging;
 using EventBus.Messages.Common;
 using MassTransit;
 using Microsoft.AspNetCore.Hosting;
@@ -6,14 +7,16 @@ using Ordering.API.EventBusConsumer;
 using Ordering.Application;
 using Ordering.Infrastructure;
 using Ordering.Infrastructure.Persistance;
+using Serilog;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSerilog(SeriLogger.Configure);
+
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-
 
 builder.Services.AddMassTransit(config => {
     config.AddConsumer<BasketCheckoutConsumer>();
