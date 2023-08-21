@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Sockets;
 
@@ -17,6 +18,8 @@ namespace Common.Logging
         {
             try
             {
+                logger.LogInformation("Sending request to {Url}", request.RequestUri);
+
                 var response = await base.SendAsync(request, cancellationToken);
 
                 if (response.IsSuccessStatusCode)
