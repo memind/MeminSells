@@ -10,7 +10,8 @@
         "discount.grpc": "StartDebugging",
         "ordering.api": "StartDebugging",
         "shopping.aggregator": "StartDebugging",
-        "meminsells": "StartDebugging"
+        "meminsells": "StartDebugging",
+        "webstatus": "StartDebugging"
       }
     }
   }
