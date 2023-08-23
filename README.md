@@ -4,6 +4,7 @@ ASP.Net Microservices
 - Databases and Microservices Containerization: Docker
 - Container Management: Portainer
 - PostgreSQL Management: pgAdmin
+- 
 
 Catalog Service
 - ASP.NET Core Web API application
@@ -58,5 +59,7 @@ Microservices Cross-Cutting Implementations
 - Using Watchdog in separate service that can watch health and load across services, and report health about the microservices by querying with the HealthChecks
 
 Microservices Resilience Implementations
-- Making Microservices more resilient Use IHttpClientFactory to implement resilient HTTP requests
 - Implement Retry and Circuit Breaker patterns with exponential backoff with IHttpClientFactory and Polly policies
+
+Microservices Tracing Implementations
+- Implement OpenTelemetry and Zipkin
