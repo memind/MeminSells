@@ -11,11 +11,37 @@ using MeminSells.Extensions;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using System.Diagnostics;
+using OpenTelemetry.Trace;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Exporter;
 
 var builder = WebApplication.CreateBuilder(args);
 
+Activity.DefaultIdFormat = ActivityIdFormat.W3C;
+
+builder.Host.ConfigureLogging(loggingBuilder =>
+{
+    loggingBuilder.Configure(options =>
+    {
+        options.ActivityTrackingOptions = ActivityTrackingOptions.TraceId | ActivityTrackingOptions.SpanId;
+    });
+}).UseSerilog(SeriLogger.Configure);
+
 builder.Services.AddTransient<LoggingDelegatingHandler>();
 builder.Host.UseSerilog(SeriLogger.Configure);
+
+builder.Services.ConfigureOpenTelemetryTracerProvider((builder) =>
+{
+    builder
+        .AddAspNetCoreInstrumentation()
+        .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("MeminSells"))
+        .AddConsoleExporter(options =>
+        {
+            options.Targets = ConsoleExporterOutputTargets.Console;
+        })
+        .AddZipkinExporter();
+});
 
 builder.Services.AddHttpClient<ICatalogService, CatalogService>(
     c => c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]))
@@ -39,6 +65,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddHealthChecks()
                    .AddUrlGroup(new Uri(builder.Configuration["ApiSettings:GatewayAddress"]), "Ocelot API Gw", HealthStatus.Degraded);
+
+builder.Services.AddOpenTelemetry();
 
 var app = builder.Build();
 

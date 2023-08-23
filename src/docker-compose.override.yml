@@ -196,6 +196,7 @@ services:
     container_name: meminSells.webstatus
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - "ElasticConfiguration:Uri=http://elasticsearch:9200"
       - HealthChecksUI__HealthChecks__0__Name=Catalog Health Check
       - HealthChecksUI__HealthChecks__0__Uri=http://catalog.api/hc
       - HealthChecksUI__HealthChecks__1__Name=Basket Health Check
@@ -210,4 +211,9 @@ services:
       - HealthChecksUI__HealthChecks__5__Uri=http://meminsells/hc
     ports:
       - "8007:80"
+
+  zipkin:
+    container_name: meminSells.zipkin
+    ports:
+      - "9411:9411"
 

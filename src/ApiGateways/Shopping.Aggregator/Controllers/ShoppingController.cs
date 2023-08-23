@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Shopping.Aggregator.Models;
 using Shopping.Aggregator.Services;
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Net;
 
