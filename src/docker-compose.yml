@@ -86,6 +86,9 @@ services:
   zipkin:
     image: openzipkin/zipkin
 
+  consul:
+    image: consul:1.15.4
+
 volumes:
   mongo_data:
   portainer_data:
