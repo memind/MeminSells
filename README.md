@@ -4,7 +4,6 @@ ASP.Net Microservices
 - Databases and Microservices Containerization: Docker
 - Container Management: Portainer
 - PostgreSQL Management: pgAdmin
-- 
 
 Catalog Service
 - ASP.NET Core Web API application
